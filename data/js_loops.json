@@ -1,0 +1,45 @@
+
+{
+  "id": "js-loops",
+  "title": "JavaScript For Loops",
+  "description": "Learn the fundamentals of 'for' loops in JavaScript.",
+  "difficulty": "Easy",
+  "icon": "js",
+  "components": [
+    {
+      "type": "theory",
+      "title": "What is a 'for' loop?",
+      "content": "A `for` loop in JavaScript is a control flow statement for executing code repeatedly. It's perfect for when you know in advance how many times you want a piece of code to run.<br/><br/>It has three parts: <br/>1. <strong>Initialization:</strong> `let i = 0` - Runs once before the loop starts. <br/>2. <strong>Condition:</strong> `i < 5` - Checked before each iteration. If it's `true`, the loop continues. <br/>3. <strong>Increment:</strong> `i++` - Runs after each iteration. <br/><br/>Here is the basic syntax: <br/>```javascript\nfor (let i = 0; i < 5; i++) {\n  console.log('Current number is ' + i);\n}\n```"
+    },
+    {
+      "type": "interactive",
+      "title": "Knowledge Check",
+      "question": "Which part of a 'for' loop is executed only once, before the loop starts?",
+      "choices": [
+        { "text": "Condition", "isCorrect": false },
+        { "text": "Increment", "isCorrect": false },
+        { "text": "Initialization", "isCorrect": true },
+        { "text": "The loop body", "isCorrect": false }
+      ],
+      "explanation": "The initialization part (e.g., `let i = 0`) is executed only a single time at the very beginning to set up the loop's counter variable."
+    },
+    {
+      "type": "practice",
+      "title": "Code Lab: Your First Loop",
+      "language": "javascript",
+      "task": "Modify the code to print numbers from 1 to 10 (inclusive).",
+      "initialCode": "// Your task: print numbers from 1 to 10\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}"
+    },
+    {
+        "type": "quiz",
+        "title": "Final Quiz",
+        "question": "What will be the final value of `i` logged to the console in this loop? `for (let i = 0; i < 3; i++) { console.log(i); }`",
+        "choices": [
+            { "text": "2", "isCorrect": true },
+            { "text": "3", "isCorrect": false },
+            { "text": "4", "isCorrect": false }
+        ],
+        "explanation": "The loop runs for i = 0, 1, and 2. When i becomes 3, the condition `i < 3` is false, so the loop terminates. The last value logged was 2."
+    }
+  ]
+}

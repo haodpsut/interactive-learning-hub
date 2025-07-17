@@ -1,0 +1,5 @@
+{
+  "name": "Interactive Learning Hub",
+  "description": "An interactive web app for students to learn various subjects through hands-on exercises, animations, and coding labs. It supports customizable lessons loaded from JSON.",
+  "requestFramePermissions": []
+}

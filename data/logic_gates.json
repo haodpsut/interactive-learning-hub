@@ -1,0 +1,36 @@
+
+{
+  "id": "logic-gates",
+  "title": "Basic Logic Gates",
+  "description": "Understand the core concepts of AND, OR, and NOT logic gates.",
+  "difficulty": "Easy",
+  "icon": "logic",
+  "components": [
+    {
+      "type": "theory",
+      "title": "Introduction to Logic Gates",
+      "content": "Logic gates are the basic building blocks of any digital system. They are electronic circuits that have one or more inputs and only one output. The relationship between the input and the output is based on a certain logic.<br/><br/><ul><li><strong>AND Gate:</strong> The output is `true` only if <em>all</em> inputs are `true`.</li><li><strong>OR Gate:</strong> The output is `true` if <em>at least one</em> of the inputs is `true`.</li><li><strong>NOT Gate:</strong> The output is the <em>inverse</em> of the input. If the input is `true`, the output is `false`, and vice versa.</li></ul>"
+    },
+    {
+      "type": "interactive",
+      "title": "AND Gate Check",
+      "question": "If an AND gate has two inputs, and one is `true` while the other is `false`, what will the output be?",
+      "choices": [
+        { "text": "True", "isCorrect": false },
+        { "text": "False", "isCorrect": true },
+        { "text": "It depends", "isCorrect": false }
+      ],
+      "explanation": "An AND gate requires ALL of its inputs to be true for the output to be true. Since one input is false, the output is false."
+    },
+    {
+        "type": "quiz",
+        "title": "OR Gate Quiz",
+        "question": "An OR gate has two inputs. If both inputs are `false`, what is the output?",
+        "choices": [
+          { "text": "True", "isCorrect": false },
+          { "text": "False", "isCorrect": true }
+        ],
+        "explanation": "An OR gate's output is only false when all of its inputs are false. Otherwise, it's true."
+    }
+  ]
+}

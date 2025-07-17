@@ -1,0 +1,32 @@
+
+{
+  "id": "physics-gravity",
+  "title": "Introduction to Gravity",
+  "description": "Explore the concept of gravity through an interactive animation.",
+  "difficulty": "Medium",
+  "icon": "physics",
+  "components": [
+    {
+      "type": "theory",
+      "title": "What is Gravity?",
+      "content": "Gravity is the force by which a planet or other body draws objects toward its center. The force of gravity keeps all of the planets in orbit around the sun.<br/><br/>On Earth, gravity gives weight to physical objects, and the Moon's gravity causes the ocean tides. The acceleration due to gravity on the surface of Earth is about <strong>9.8 m/s²</strong>. This means that, ignoring air resistance, the speed of an object falling freely will increase by about 9.8 meters per second every second."
+    },
+    {
+      "type": "animation",
+      "title": "Gravity Lab",
+      "animationType": "gravity-fall",
+      "description": "Use the slider to change the force of gravity and observe its effect on the falling object. Stronger gravity will make the object fall faster. Click the ball to drop it again with the new settings."
+    },
+    {
+      "type": "quiz",
+      "title": "Concept Check",
+      "question": "If you were on a planet with a gravity of 20 m/s², would you fall faster or slower than on Earth?",
+      "choices": [
+        { "text": "Faster", "isCorrect": true },
+        { "text": "Slower", "isCorrect": false },
+        { "text": "The same speed", "isCorrect": false }
+      ],
+      "explanation": "A higher value for gravitational acceleration means the force pulling you down is stronger, so your speed would increase more rapidly, causing you to fall faster."
+    }
+  ]
+}
