@@ -1,11 +1,11 @@
 
-import React, { useState, useContext, useEffect, ReactNode } from 'react';
+import React, { useState, useContext, useEffect, ReactElement } from 'react';
 import { AppContext } from '../contexts/AppContext';
 import { OPENROUTER_FREE_MODELS } from '../constants';
 import { KeyRound, X } from 'lucide-react';
 
 interface SettingsModalProps {
-  triggerButton?: ReactNode;
+  triggerButton?: ReactElement;
 }
 
 const SettingsModal: React.FC<SettingsModalProps> = ({ triggerButton }) => {
@@ -41,7 +41,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ triggerButton }) => {
 
   return (
     <>
-      {triggerButton && React.cloneElement(triggerButton as React.ReactElement, { onClick: () => setIsOpen(true) })}
+      {triggerButton && React.cloneElement(triggerButton, { onClick: () => setIsOpen(true) })}
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 animate__animated animate__fadeIn">
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-8 w-full max-w-md m-4 relative">
@@ -58,7 +58,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ triggerButton }) => {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">AI Provider</label>
               <select
                 value={provider}
-                onChange={(e) => setProvider(e.target.value)}
+                onChange={(e) => setProvider(e.target.value as 'gemini' | 'openrouter')}
                 className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring-2 focus:ring-primary-500"
               >
                 <option value="gemini">Google Gemini</option>

@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useEffect, ReactNode } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { Lesson } from '../types';
@@ -47,7 +46,14 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     const fetchLessons = async () => {
       try {
         const lessonFiles = ['js_loops.json', 'logic_gates.json', 'physics_gravity.json'];
-        const lessonPromises = lessonFiles.map(file => fetch(`/data/${file}`).then(res => res.json()));
+        const lessonPromises = lessonFiles.map(file =>
+          fetch(`./data/${file}`).then(res => {
+            if (!res.ok) {
+              throw new Error(`Failed to load ${file}: ${res.statusText}`);
+            }
+            return res.json();
+          })
+        );
         const loadedLessons = await Promise.all(lessonPromises);
         setLessons(loadedLessons);
       } catch (error) {
